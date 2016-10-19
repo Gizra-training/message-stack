@@ -30,11 +30,19 @@ function dynamic_example_message_training_default_message_type() {
     },
     "language" : "",
     "arguments" : null,
-    "message_text" : { "und" : [
+    "message_text" : {
+      "en" : [
         {
-          "value" : "[message:user:name] commented [message:field-comment:title] on \\u003Ca href=\\u0022[message:field-node-ref:url]\\u0022\\u003E[message:field-node:title]\\u003C\\/a\\u003E",
+          "value" : "[message:user:name] commented @{message:field-comment:title} on \\u003Ca href=\\u0022[message:field-node-ref:url]\\u0022\\u003E[message:field-node:title]\\u003C\\/a\\u003E",
           "format" : "filtered_html",
-          "safe_value" : "\\u003Cp\\u003E[message:user:name] commented [message:field-comment:title] on \\u003Ca href=\\u0022url]\\u0022\\u003E[message:field-node:title]\\u003C\\/a\\u003E\\u003C\\/p\\u003E\\n"
+          "safe_value" : "\\u003Cp\\u003E[message:user:name] commented @{message:field-comment:title} on \\u003Ca href=\\u0022url]\\u0022\\u003E[message:field-node:title]\\u003C\\/a\\u003E\\u003C\\/p\\u003E\\n"
+        }
+      ],
+      "und" : [
+        {
+          "value" : "[message:user:name] commented @{message:field-comment:title} on \\u003Ca href=\\u0022[message:field-node-ref:url]\\u0022\\u003E[message:field-node:title]\\u003C\\/a\\u003E",
+          "format" : "filtered_html",
+          "safe_value" : "\\u003Cp\\u003E[message:user:name] commented @{message:field-comment:title} on \\u003Ca href=\\u0022url]\\u0022\\u003E[message:field-node:title]\\u003C\\/a\\u003E\\u003C\\/p\\u003E\\n"
         }
       ]
     }
