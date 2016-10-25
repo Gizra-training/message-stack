@@ -1,0 +1,15 @@
+name = "Exercise migration"
+description = "Populate content."
+package = "Exercise"
+core = 7.x
+dependencies[] = migrate
+dependencies[] = migrate_extras
+
+; Handlers
+files[] = handlers/ExerciseMigrateBase.php
+
+files[] = handlers/node/ExerciseCompaniesMigrate.php
+files[] = handlers/node/ExerciseEventsMigrate.php
+
+files[] = handlers/user/ExerciseUsersMigrate.php
+

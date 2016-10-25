@@ -19,8 +19,8 @@ rsync -avz --exclude-from 'sync_hedley_exclude.txt' ./behat $GENERATOR_FOLDER/ap
 # PhantomCSS
 rsync -avz --exclude-from 'sync_hedley_exclude.txt' ./phantomcss $GENERATOR_FOLDER/app/templates
 
-# Drupal - we make sure to hardcode the copy to "dynamic_example".
-rsync -avz --exclude-from 'sync_hedley_exclude.txt' ./dynamic_example $GENERATOR_FOLDER/app/templates
+# Drupal - we make sure to hardcode the copy to "exercise".
+rsync -avz --exclude-from 'sync_hedley_exclude.txt' ./exercise $GENERATOR_FOLDER/app/templates
 
 
 

@@ -35,9 +35,9 @@ code_review () {
 PATTERNS="*.features.inc,*.features.*.inc,*.field_group.inc,*.strongarm.inc,*.ds.inc,*.context.inc,*.pages.inc,*.pages_default.inc,*.views_default.inc,*.file_default_displays.inc,*.facetapi_defaults.inc"
 
 echo
-echo "${LBLUE}> Sniffing dynamic_example Modules${RESTORE}"
+echo "${LBLUE}> Sniffing exercise Modules${RESTORE}"
 echo
-for dir in $TRAVIS_BUILD_DIR/dynamic_example/modules/custom/*/ ; do
+for dir in $TRAVIS_BUILD_DIR/exercise/modules/custom/*/ ; do
   code_review $dir $PATTERNS
 done
 

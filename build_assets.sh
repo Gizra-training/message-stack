@@ -3,4 +3,4 @@
 cd static
 gulp build
 
-cp -R site/assets ../dynamic_example/themes/dynamic_example_theme/
+cp -R site/assets ../exercise/themes/exercise_theme/

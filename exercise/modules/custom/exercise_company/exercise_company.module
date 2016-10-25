@@ -1,0 +1,9 @@
+<?php
+/**
+ * @file
+ * Code for the Exercise Company feature.
+ */
+
+include_once 'exercise_company.features.inc';
+
+

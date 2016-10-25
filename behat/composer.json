@@ -1,6 +1,6 @@
 {
-  "name": "Behat tests for DynamicExample",
-  "description": "Functional testing for DynamicExample installation profile.",
+  "name": "Behat tests for Exercise",
+  "description": "Functional testing for Exercise installation profile.",
   "require": {
     "drupal/drupal-extension": "~3.0"
   },

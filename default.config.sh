@@ -10,9 +10,9 @@
 
 
 # The profile used to install the platform.
-PROFILE_NAME="dynamic_example"
+PROFILE_NAME="exercise"
 # The human name of the install profile
-PROFILE_TITLE="DynamicExample"
+PROFILE_TITLE="Exercise"
 
 
 # Modify the URL below to match your local domain the site will be accessible on.
@@ -30,7 +30,7 @@ ADMIN_EMAIL="admin@example.com"
 MYSQL_USERNAME="root"
 MYSQL_PASSWORD="root"
 MYSQL_HOSTNAME="localhost"
-MYSQL_DB_NAME="dynamic_example"
+MYSQL_DB_NAME="exercise"
 
 
 

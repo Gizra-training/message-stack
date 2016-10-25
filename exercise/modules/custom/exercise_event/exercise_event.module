@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Exercise Event feature.
+ */
+
+include_once 'exercise_event.features.inc';

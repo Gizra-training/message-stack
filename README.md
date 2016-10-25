@@ -1,6 +1,6 @@
-[![Build Status](https://travis-ci.org/amitaibu/dynamic_example.svg)](https://travis-ci.org/amitaibu/dynamic_example)
+[![Build Status](https://travis-ci.org/amitaibu/exercise.svg)](https://travis-ci.org/amitaibu/exercise)
 
-# Drupal 7 - Install Profile DynamicExample
+# Drupal 7 - Install Profile Exercise
 
 This is a starting base to create Drupal 7 websites using an install profile.
 
@@ -10,7 +10,7 @@ This is a starting base to create Drupal 7 websites using an install profile.
 **Warning:** you need to setup [Drush](https://github.com/drush-ops/drush)
 first or the installation and update scripts will not work.
 
-Clone the project from [GitHub](https://github.com/Gizra/dynamic_example).
+Clone the project from [GitHub](https://github.com/Gizra/exercise).
 
 #### Create config file
 
@@ -59,9 +59,9 @@ You can Reinstall the platform any type by running the install script.
    subfolders of the profile.
 4. Download and extract Drupal 7 core in the /www folder
 5. Create an empty sites/default/files directory
-6. Makes a symlink within the /www/profiles directory to the /dynamic_example
+6. Makes a symlink within the /www/profiles directory to the /exercise
    directory.
-7. Run the Drupal installer (Drush) using the DynamicExample profile.
+7. Run the Drupal installer (Drush) using the Exercise profile.
 
 #### Warning!
 
@@ -97,5 +97,5 @@ when you run the upgrade script.
    subfolders of the profile.
 5. Download and extract Drupal 7 core in the /www folder.
 6. Makes a symlink within the /www/profiles directory to the
-   /dynamic_example 7. directory.
+   /exercise 7. directory.
 7. Restore the backup of the sites/default folder.
