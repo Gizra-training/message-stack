@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Message exercise feature.
+ */
+
+include_once 'message_exercise.features.inc';
+
+/**
+ * Implements hook_comment_insert().
+ */
+function message_exercise_comment_insert($comment) {
+  $account = user_load($comment->uid);
+
+  $message = message_create('user_commented_on_node', array(), $account);
+  $wrapper = entity_metadata_wrapper('message', $message);
+  $wrapper->field_node_ref->set($comment->nid);
+  $wrapper->field_comment_title->set($comment->subject);
+
+  // The message should be published only if the node and the comment are
+  // both published.
+  $wrapper->save();
+}
