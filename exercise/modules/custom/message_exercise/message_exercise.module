@@ -15,10 +15,11 @@ function message_exercise_comment_insert($comment) {
 
   $message = message_create('user_commented_on_node', array(), $account);
   $wrapper = entity_metadata_wrapper('message', $message);
+
+  // Set the node reference and comment title fields.
   $wrapper->field_node_ref->set($comment->nid);
   $wrapper->field_comment_title->set($comment->subject);
 
-  // The message should be published only if the node and the comment are
-  // both published.
+  // Save the message.
   $wrapper->save();
 }

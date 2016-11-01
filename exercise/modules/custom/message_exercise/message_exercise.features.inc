@@ -27,7 +27,7 @@ function message_exercise_default_message_type() {
   $items = array();
   $items['user_commented_on_node'] = entity_import('message_type', '{
     "name" : "user_commented_on_node",
-    "description" : "user commented on a node",
+    "description" : "User commented on a node",
     "argument_keys" : [],
     "argument" : [],
     "category" : "message_type",
@@ -35,7 +35,7 @@ function message_exercise_default_message_type() {
       "token options" : { "clear" : 0 },
       "purge" : { "override" : 0, "enabled" : 0, "quota" : "", "days" : "" }
     },
-    "language" : "he",
+    "language" : "en",
     "arguments" : null,
     "message_text" : {
       "en" : [
