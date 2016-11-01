@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the ym message stack p1 feature.
+ */
+
+include_once 'ym_message_stack_p1.features.inc';

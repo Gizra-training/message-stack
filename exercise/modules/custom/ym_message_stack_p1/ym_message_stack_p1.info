@@ -1,0 +1,14 @@
+name = ym message stack p1
+core = 7.x
+package = Features
+dependencies[] = ctools
+dependencies[] = entity
+dependencies[] = features
+dependencies[] = locale
+dependencies[] = message
+dependencies[] = strongarm
+features[ctools][] = strongarm:strongarm:1
+features[features_api][] = api:2
+features[language][] = en
+features[language][] = he
+features[message_type][] = user_comment_on_post
