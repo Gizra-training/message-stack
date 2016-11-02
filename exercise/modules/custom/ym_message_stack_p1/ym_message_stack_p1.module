@@ -1,0 +1,33 @@
+<?php
+/**
+ * @file
+ * Code for the ym message stack p1 feature.
+ */
+
+include_once 'ym_message_stack_p1.features.inc';
+
+function ym_message_stack_p1_ctools_plugin_directory($module, $plugin) {
+  if ($module == 'ctools') {
+    return 'plugins/' . $plugin;
+  }
+}
+
+/**
+ * The comment is being inserted.
+ *
+ * @param $comment
+ *   The comment object.
+ */
+function ym_message_stack_p1_comment_insert($comment) {
+
+  $comment_wrapper = entity_metadata_wrapper('comment' , $comment);
+  $node_wrapper = entity_metadata_wrapper('node',$comment->nid);
+  $message = message_create('user_comment_on_post', array('uid' => $comment->uid));
+
+  $message->arguments = array(
+    '!node_url' => url('node/' . $comment->nid),
+    '!node_title' => $node_wrapper->label(),
+    '!comment_title' => $comment_wrapper->label(),
+  );
+  $message->save();
+}

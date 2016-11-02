@@ -52,3 +52,4 @@ dependencies[] = exercise_company
 dependencies[] = exercise_event
 dependencies[] = exercise_file
 dependencies[] = exercise_restful
+dependencies[] = ym_message_stack_p1
