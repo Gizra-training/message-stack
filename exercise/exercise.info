@@ -52,5 +52,5 @@ dependencies[] = views_bulk_operations
 dependencies[] = exercise_company
 dependencies[] = exercise_event
 dependencies[] = exercise_file
-dependencies[] = message_exercise
+dependencies[] = exercise_message
 dependencies[] = exercise_restful
