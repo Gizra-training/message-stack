@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Exercise message feature.
+ */
+
+include_once 'exercise_message.features.inc';
