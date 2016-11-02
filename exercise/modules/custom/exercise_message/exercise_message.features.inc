@@ -40,16 +40,16 @@ function exercise_message_default_message_type() {
     "message_text" : {
       "en" : [
         {
-          "value" : "[message:user:name] commented [message:field-comment:title] on \\u003Ca href=\\u0022[message:field-node:url]\\u0022\\u003E[message:field-node:title]\\u003C\\/a\\u003E",
+          "value" : "[message:user:name] commented @{message:field-comment:title} on \\u003Ca href=\\u0022[message:field-node:url]\\u0022\\u003E[message:field-node:title]\\u003C\\/a\\u003E",
           "format" : "filtered_html",
-          "safe_value" : "\\u003Cp\\u003E[message:user:name] commented [message:field-comment:title] on \\u003Ca href=\\u0022url]\\u0022\\u003E[message:field-node:title]\\u003C\\/a\\u003E\\u003C\\/p\\u003E\\n"
+          "safe_value" : "\\u003Cp\\u003E[message:user:name] commented @{message:field-comment:title} on \\u003Ca href=\\u0022url]\\u0022\\u003E[message:field-node:title]\\u003C\\/a\\u003E\\u003C\\/p\\u003E\\n"
         }
       ],
       "he" : [
         {
-          "value" : "[message:user:name] \\u05d4\\u05d2\\u05d9\\u05d1 [message:field-comment:title] \\u05e2\\u05dc \\u003Ca href=\\u0022[message:field-node:url]\\u0022\\u003E[message:field-node:title]\\u003C\\/a\\u003E\\r\\n",
+          "value" : "[message:user:name] \\u05d4\\u05d2\\u05d9\\u05d1 @{message:field-comment:title} \\u05e2\\u05dc \\u003Ca href=\\u0022[message:field-node:url]\\u0022\\u003E[message:field-node:title]\\u003C\\/a\\u003E\\r\\n",
           "format" : "filtered_html",
-          "safe_value" : "\\u003Cp\\u003E[message:user:name] \\u05d4\\u05d2\\u05d9\\u05d1 [message:field-comment:title] \\u05e2\\u05dc \\u003Ca href=\\u0022url]\\u0022\\u003E[message:field-node:title]\\u003C\\/a\\u003E\\u003C\\/p\\u003E\\n"
+          "safe_value" : "\\u003Cp\\u003E[message:user:name] \\u05d4\\u05d2\\u05d9\\u05d1 @{message:field-comment:title} \\u05e2\\u05dc \\u003Ca href=\\u0022url]\\u0022\\u003E[message:field-node:title]\\u003C\\/a\\u003E\\u003C\\/p\\u003E\\n"
         }
       ],
       "und" : [
