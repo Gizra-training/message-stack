@@ -6,6 +6,12 @@
 
 include_once 'ym_message_stack_p1.features.inc';
 
+function ym_message_stack_p1_ctools_plugin_directory($module, $plugin) {
+  if ($module == 'ctools') {
+    return 'plugins/' . $plugin;
+  }
+}
+
 /**
  * The comment is being inserted.
  *
