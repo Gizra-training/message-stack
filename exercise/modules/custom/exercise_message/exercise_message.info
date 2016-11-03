@@ -1,0 +1,17 @@
+name = Exercise Message
+core = 7.x
+package = Exercise
+dependencies[] = ctools
+dependencies[] = entity
+dependencies[] = features
+dependencies[] = locale
+dependencies[] = message
+dependencies[] = strongarm
+dependencies[] = text
+features[ctools][] = strongarm:strongarm:1
+features[features_api][] = api:2
+features[field_base][] = message_text
+features[field_instance][] = message_type-message_type-message_text
+features[language][] = en
+features[language][] = he
+features[message_type][] = comment
