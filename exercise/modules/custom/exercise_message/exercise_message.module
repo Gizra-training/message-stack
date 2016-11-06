@@ -5,3 +5,13 @@
  */
 
 include_once 'exercise_message.features.inc';
+
+function message_example_comment_insert($comment) {
+  $account = user_load($comment->uid);
+
+  $message = message_create('exercise_message_comment_added', array(), $account);
+  $wrapper = entity_metadata_wrapper('message', $message);
+  $wrapper->field_comment_field->set($comment);
+
+  $wrapper->save();
+}
