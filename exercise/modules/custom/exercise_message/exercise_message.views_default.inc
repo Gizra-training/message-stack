@@ -48,6 +48,15 @@ function exercise_message_views_default_views() {
   $handler->display->display_options['relationships']['user']['id'] = 'user';
   $handler->display->display_options['relationships']['user']['table'] = 'message';
   $handler->display->display_options['relationships']['user']['field'] = 'user';
+  /* Relationship: Entity Reference: Referenced Entity */
+  $handler->display->display_options['relationships']['field_comment_field_target_id']['id'] = 'field_comment_field_target_id';
+  $handler->display->display_options['relationships']['field_comment_field_target_id']['table'] = 'field_data_field_comment_field';
+  $handler->display->display_options['relationships']['field_comment_field_target_id']['field'] = 'field_comment_field_target_id';
+  /* Relationship: Comment: Content */
+  $handler->display->display_options['relationships']['nid']['id'] = 'nid';
+  $handler->display->display_options['relationships']['nid']['table'] = 'comment';
+  $handler->display->display_options['relationships']['nid']['field'] = 'nid';
+  $handler->display->display_options['relationships']['nid']['relationship'] = 'field_comment_field_target_id';
   /* Field: Message: Timestamp */
   $handler->display->display_options['fields']['timestamp']['id'] = 'timestamp';
   $handler->display->display_options['fields']['timestamp']['table'] = 'message';
@@ -75,6 +84,21 @@ function exercise_message_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'exercise_message_comment_added' => 'exercise_message_comment_added',
   );
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type_1']['id'] = 'type_1';
+  $handler->display->display_options['filters']['type_1']['table'] = 'node';
+  $handler->display->display_options['filters']['type_1']['field'] = 'type';
+  $handler->display->display_options['filters']['type_1']['relationship'] = 'nid';
+  $handler->display->display_options['filters']['type_1']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['type_1']['expose']['operator_id'] = 'type_1_op';
+  $handler->display->display_options['filters']['type_1']['expose']['label'] = 'Type';
+  $handler->display->display_options['filters']['type_1']['expose']['operator'] = 'type_1_op';
+  $handler->display->display_options['filters']['type_1']['expose']['identifier'] = 'type_1';
+  $handler->display->display_options['filters']['type_1']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    3 => 0,
+  );
 
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'page');
@@ -96,9 +120,12 @@ function exercise_message_views_default_views() {
     t('next ›'),
     t('last »'),
     t('User'),
+    t('Comment entity referenced from field_comment_field'),
+    t('Content'),
     t('Timestamp'),
     t('Render message (Get text)'),
     t('Name'),
+    t('Type'),
     t('Page'),
   );
   $export['my_message'] = $view;
