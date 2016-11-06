@@ -28,9 +28,24 @@ function exercise_comment_log_default_message_type() {
       "token options" : { "clear" : 0 },
       "purge" : { "override" : 0, "enabled" : 0, "quota" : "", "days" : "" }
     },
-    "language" : "",
+    "language" : "he",
     "arguments" : null,
-    "message_text" : { "und" : [
+    "message_text" : {
+      "en" : [
+        {
+          "value" : "[message:field-comment:author] commented \\u003Ca href=\\u0022[message:field-comment:url]\\u0022\\u003E@{message:field-comment:title}\\u003Ca\\u003E on [message:field-comment:node:title]",
+          "format" : "filtered_html",
+          "safe_value" : "\\u003Cp\\u003E[message:field-comment:author] commented \\u003Ca href=\\u0022url]\\u0022\\u003E@{message:field-comment:title}\\u003C\\/a\\u003E\\u003Ca\\u003E on [message:field-comment:node:title]\\u003C\\/a\\u003E\\u003C\\/p\\u003E\\n"
+        }
+      ],
+      "he" : [
+        {
+          "value" : "[message:field-comment:author] \\u05d4\\u05d2\\u05d9\\u05d1 \\u003Ca href=\\u0022[message:field-comment:url]\\u0022\\u003E@{message:field-comment:title}\\u003Ca\\u003E \\u05e2\\u05dc [message:field-comment:node:title]",
+          "format" : "filtered_html",
+          "safe_value" : "\\u003Cp\\u003E[message:field-comment:author] \\u05d4\\u05d2\\u05d9\\u05d1 \\u003Ca href=\\u0022url]\\u0022\\u003E@{message:field-comment:title}\\u003C\\/a\\u003E\\u003Ca\\u003E \\u05e2\\u05dc [message:field-comment:node:title]\\u003C\\/a\\u003E\\u003C\\/p\\u003E\\n"
+        }
+      ],
+      "und" : [
         {
           "value" : "[message:field-comment:author] commented \\u003Ca href=\\u0022[message:field-comment:url]\\u0022\\u003E@{message:field-comment:title}\\u003C\\/a\\u003E on [message:field-comment:node:title]",
           "format" : "full_html",
