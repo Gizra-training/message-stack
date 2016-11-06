@@ -14,6 +14,13 @@ function exercise_comment_log_ctools_plugin_api($module = NULL, $api = NULL) {
 }
 
 /**
+ * Implements hook_views_api().
+ */
+function exercise_comment_log_views_api($module = NULL, $api = NULL) {
+  return array("api" => "3.0");
+}
+
+/**
  * Implements hook_default_message_type().
  */
 function exercise_comment_log_default_message_type() {
@@ -33,16 +40,16 @@ function exercise_comment_log_default_message_type() {
     "message_text" : {
       "en" : [
         {
-          "value" : "[message:field-comment:author] commented \\u003Ca href=\\u0022[message:field-comment:url]\\u0022\\u003E@{message:field-comment:title}\\u003Ca\\u003E on [message:field-comment:node:title]",
+          "value" : "[message:field-comment:author] commented \\u003Ca href=\\u0022[message:field-comment:url]\\u0022\\u003E@{message:field-comment:title}\\u003C\\/a\\u003E on [message:field-comment:node:title]",
           "format" : "filtered_html",
-          "safe_value" : "\\u003Cp\\u003E[message:field-comment:author] commented \\u003Ca href=\\u0022url]\\u0022\\u003E@{message:field-comment:title}\\u003C\\/a\\u003E\\u003Ca\\u003E on [message:field-comment:node:title]\\u003C\\/a\\u003E\\u003C\\/p\\u003E\\n"
+          "safe_value" : "\\u003Cp\\u003E[message:field-comment:author] commented \\u003Ca href=\\u0022url]\\u0022\\u003E@{message:field-comment:title}\\u003C\\/a\\u003E on [message:field-comment:node:title]\\u003C\\/p\\u003E\\n"
         }
       ],
       "he" : [
         {
-          "value" : "[message:field-comment:author] \\u05d4\\u05d2\\u05d9\\u05d1 \\u003Ca href=\\u0022[message:field-comment:url]\\u0022\\u003E@{message:field-comment:title}\\u003Ca\\u003E \\u05e2\\u05dc [message:field-comment:node:title]",
+          "value" : "[message:field-comment:author] \\u05d4\\u05d2\\u05d9\\u05d1 \\u003Ca href=\\u0022[message:field-comment:url]\\u0022\\u003E@{message:field-comment:title}\\u003C\\/a\\u003E \\u05e2\\u05dc [message:field-comment:node:title]",
           "format" : "filtered_html",
-          "safe_value" : "\\u003Cp\\u003E[message:field-comment:author] \\u05d4\\u05d2\\u05d9\\u05d1 \\u003Ca href=\\u0022url]\\u0022\\u003E@{message:field-comment:title}\\u003C\\/a\\u003E\\u003Ca\\u003E \\u05e2\\u05dc [message:field-comment:node:title]\\u003C\\/a\\u003E\\u003C\\/p\\u003E\\n"
+          "safe_value" : "\\u003Cp\\u003E[message:field-comment:author] \\u05d4\\u05d2\\u05d9\\u05d1 \\u003Ca href=\\u0022url]\\u0022\\u003E@{message:field-comment:title}\\u003C\\/a\\u003E \\u05e2\\u05dc [message:field-comment:node:title]\\u003C\\/p\\u003E\\n"
         }
       ],
       "und" : [
@@ -54,5 +61,23 @@ function exercise_comment_log_default_message_type() {
       ]
     }
   }');
+  return $items;
+}
+
+/**
+ * Implements hook_node_info().
+ */
+function exercise_comment_log_node_info() {
+  $items = array(
+    'article' => array(
+      'name' => t('Article'),
+      'base' => 'node_content',
+      'description' => '',
+      'has_title' => '1',
+      'title_label' => t('Title'),
+      'help' => '',
+    ),
+  );
+  drupal_alter('node_info', $items);
   return $items;
 }
