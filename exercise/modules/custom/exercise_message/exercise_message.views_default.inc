@@ -99,25 +99,21 @@ function exercise_message_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'comment' => 'comment',
   );
-  $handler->display->display_options['filters']['type']['exposed'] = TRUE;
   $handler->display->display_options['filters']['type']['expose']['operator_id'] = 'type_op';
-  $handler->display->display_options['filters']['type']['expose']['label'] = 'Message type';
+  $handler->display->display_options['filters']['type']['expose']['label'] = 'Type';
   $handler->display->display_options['filters']['type']['expose']['operator'] = 'type_op';
   $handler->display->display_options['filters']['type']['expose']['identifier'] = 'type';
-  $handler->display->display_options['filters']['type']['expose']['remember_roles'] = array(
-    2 => '2',
-    1 => 0,
-    3 => 0,
-  );
 
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'page_1');
   $handler->display->display_options['path'] = 'admin/content/comments_message';
   $handler->display->display_options['menu']['type'] = 'tab';
-  $handler->display->display_options['menu']['title'] = 'Messages';
+  $handler->display->display_options['menu']['title'] = 'Comments';
   $handler->display->display_options['menu']['description'] = 'A list of all messages.';
   $handler->display->display_options['menu']['weight'] = '0';
   $handler->display->display_options['menu']['name'] = 'management';
+  $handler->display->display_options['menu']['context'] = 0;
+  $handler->display->display_options['menu']['context_only_inline'] = 0;
   $translatables['comment_message'] = array(
     t('Defaults'),
     t('more'),
@@ -137,7 +133,7 @@ function exercise_message_views_default_views() {
     t('User'),
     t('Timestamp'),
     t('Text'),
-    t('Message type'),
+    t('Type'),
     t('Page'),
   );
   $export['comment_message'] = $view;
