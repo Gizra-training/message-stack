@@ -1,6 +1,8 @@
 name = Exercise Message
 core = 7.x
 package = Features
+dependencies[] = ctools
+dependencies[] = entity
 dependencies[] = entityreference
 dependencies[] = features
 dependencies[] = locale
