@@ -1,0 +1,26 @@
+<?php
+/**
+ * @file
+ * Code for the exercise Comment Log feature.
+ */
+
+include_once 'exercise_comment_log.features.inc';
+
+
+
+/**
+ * Implements hook_comment_insert().
+ */
+function exercise_comment_log_comment_insert($comment) {
+  $account = user_load($comment->uid);
+  $node = node_load($comment->nid);
+
+  $message = message_create('comment_log', array(), $account);
+  // Save reference to the node in the node reference field, and the
+  // "publish" state (i.e. if the node is published or unpublished).
+  $wrapper = entity_metadata_wrapper('message', $message);
+  $wrapper->field_account->set($node);
+  $wrapper->field_comment->set($comment);
+
+  $wrapper->save();
+}
