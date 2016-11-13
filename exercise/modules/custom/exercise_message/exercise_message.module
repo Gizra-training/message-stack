@@ -1,0 +1,23 @@
+<?php
+/**
+ * @file
+ * Code for the Exercise Message feature.
+ */
+
+include_once 'exercise_message.features.inc';
+
+/**
+ * Implements hook_comment_insert().
+ */
+function exercise_message_comment_insert($comment) {
+  $account = user_load($comment->uid);
+
+  // Create the message.
+  $message = message_create('comment', array(), $account);
+  $wrapper = entity_metadata_wrapper('message', $message);
+
+  // Save refrenece to the comment.
+  $wrapper->field_comment->set($comment);
+
+  $wrapper->save();
+}
