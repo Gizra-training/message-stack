@@ -40,9 +40,9 @@ function exercise_message_default_message_type() {
     "message_text" : {
       "en" : [
         {
-          "value" : "[message:user:name] commented [message:field-comment-field:title] on \\u003Ca href=\\u0022[message:field-comment-field:node:url]\\u0022\\u003E[message:field-comment-field:node:title]\\u003C\\/a\\u003E.",
-          "format" : "filtered_html",
-          "safe_value" : "\\u003Cp\\u003E[message:user:name] commented [message:field-comment-field:title] on \\u003Ca href=\\u0022url]\\u0022\\u003E[message:field-comment-field:node:title]\\u003C\\/a\\u003E.\\u003C\\/p\\u003E\\n"
+          "value" : "[message:user:name] commented [message:field-comment-field:title] on \\u003Ca href=\\u0022[message:field-comment-field:node:url]\\u0022\\u003E[message:field-comment-field:node:title]\\u003C\\/a\\u003E.\\r\\n",
+          "format" : "full_html",
+          "safe_value" : "\\u003Cp\\u003E[message:user:name] commented [message:field-comment-field:title] on \\u003Ca href=\\u0022[message:field-comment-field:node:url]\\u0022\\u003E[message:field-comment-field:node:title]\\u003C\\/a\\u003E.\\u003C\\/p\\u003E\\n"
         }
       ],
       "he" : [
