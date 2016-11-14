@@ -46,9 +46,11 @@ dependencies[] = strongarm
 dependencies[] = token
 dependencies[] = views
 dependencies[] = views_bulk_operations
+dependencies[] = locale
 
 ; Exercise
 dependencies[] = exercise_company
 dependencies[] = exercise_event
 dependencies[] = exercise_file
 dependencies[] = exercise_restful
+dependencies[] = exercise_message

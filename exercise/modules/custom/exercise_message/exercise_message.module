@@ -1,0 +1,24 @@
+<?php
+/**
+ * @file
+ * Code for the Exercise Message feature.
+ */
+
+include_once 'exercise_message.features.inc';
+
+/**
+ * Implements hook_comment_insert().
+ */
+function exercise_message_comment_insert($comment) {
+  // Load the node.
+  $node = node_load($comment->nid);
+
+  // Create the message.
+  $message = message_create('comment');
+
+  // Set the entity references to the comment and the node.
+  $wrapper = entity_metadata_wrapper('message', $message);
+  $wrapper->field_comment->set($comment);
+  $wrapper->field_node->set($node);
+  $wrapper->save();
+}
